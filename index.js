@@ -14,7 +14,8 @@ hover.addEventListener('mouseover', function (){
 // b.	if the password is incorrect, send an alert message
 // c.	Your page should also include an <h1> tag. If the information in the form is correct, have Javascript change the text in the <h1>.HTML page.
 
-let click = document.querySelector("form").addEventListener("submit", function () {
+let click = document.querySelector("form").addEventListener("submit", function (event) {
+	event.preventDefault();
         let currentVal = document.getElementById("exampleInputPassword1").value;
         let defaultVal = 12345678;
      
